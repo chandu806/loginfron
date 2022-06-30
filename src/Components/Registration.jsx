@@ -31,14 +31,14 @@ export const Registration = () => {
             email: userDetails.email,
             mobile: userDetails.mobile,
             password: userDetails.password,
-            confrmPassword: userDetails.confrmPassword
+            conformPassword: userDetails.conformPassword
         });
 
-        if (userDetails.username.trim() == "" || userDetails.email.trim() == "" || userDetails.mobile.trim() == "" ||
+        if (userDetails.username.trim() == "" || userDetails.email.trim() == "" || userDetails.mobile.trim() == "" 
          ) {
         }
         else {
-            delete userDetails.confrmPassword;
+            delete userDetails.conformPassword;
             let result = await fetch('https::/localhost:30000/signup', {
                 method: "POST",
                 headers: {

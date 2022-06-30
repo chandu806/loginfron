@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
 
 
-    const verifyTokenFe = async (token) => { // to verify Token
+    const verifyToken = async (token) => { // to verify Token
         let result = await fetch(`https://localhost:3000/postman.com/verifyToken`, {
             method: "POST",
             headers: {
@@ -25,7 +25,7 @@ const Home = () => {
         }
     }
 
-    const getUserName = async () => { // fetch userName to show on Header
+    const getName = async () => { 
         let result = await fetch(`https:://localhost3000/login/${id}`)
         result = await result.json();
         if (!result.status) {
@@ -46,8 +46,8 @@ const Home = () => {
             return;
         }
 
-        verifyTokenFe(token)
-        getUserName()
+        verifyToken(token)
+        getName()
 
       
     }, [])

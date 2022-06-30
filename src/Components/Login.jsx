@@ -55,13 +55,13 @@ const Login = () => {
                         <input type="text" className='email' onChange={handleOnChange} required />
                     </div>
                     <div >
-                        <label  htmlFor="password">Password </label>
+                        <label  For="password">Password </label>
                         <input type="text" className='password' onChange={handleOnChange} required />
                     </div>
                     <div >
                         <input type="submit" value="Login" />
                     </div>
-                    <p>Not a user? <span  onClick={() => { navigate('/register') }}>Sign up</span> </p>
+                    <p>Not user? <span  onClick={() => { navigate('/register') }}>Sign up</span> </p>
                 </div>
             </form>
         </div >
